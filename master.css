@@ -1,0 +1,137 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  --softblack: #5a5050;
+  --blue: #547a82;
+  --softblue: #3eaca8;
+  --softgreen: #a2d4ab;
+  --lightgreen: #e5eec1;
+}
+
+body {
+  height: 100vh;
+  overflow: hidden;
+  background-color: var(--softblack);
+}
+
+.title {
+  margin: 1vw;
+  margin-left: 3vw;
+  padding-left: 1vw;
+  width: 16%;
+  font-size: 2.5rem;
+  letter-spacing: 2px;
+  color: var(--lightgreen);
+  background: linear-gradient(45deg, var(--softblue) 47%, var(--lightgreen) 20%);
+  border-radius: 5px;
+}
+.title1 {
+  font-size: 2.5rem;
+  color: var(--softblue);
+}
+
+section {
+  height: 80%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+article {
+  text-align: center;
+}
+
+button {
+  margin: 2vw;
+  width: auto;
+  padding: 10px;
+  font-size: 1.2rem;
+  background-color: var(--softblue);
+  border: 2px solid var(--lightgreen);
+  border-radius: 10px;
+  box-shadow: 5px 5px var(--lightgreen);
+  transition: all 1s ease;
+}
+
+button:hover {
+  box-shadow: -5px -5px var(--lightgreen);
+  transform: translate(-5px, -5px);
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+footer a {
+  width: 10vw;
+  margin-left: 1vw;
+  margin-right: 1vw;
+  text-align: center;
+  text-decoration: none;
+  color: var(--lightgreen);
+}
+
+footer a:visited {
+  color: var(--lightgreen);
+}
+
+/* Desktop Media Query */
+
+@media (max-width: 1366px) {
+  .title {
+    width: 19%;
+  }
+}
+
+/* Tablet Media Query */
+
+@media (max-width: 768px) {
+  .title {
+    width: 32%;
+  }
+  section {
+    height: 70%;
+  }
+}
+
+@media (max-width: 1280px) {
+  .title {
+    width: 20%;
+  }
+}
+
+/* Mobile Media Query */
+
+@media (max-width: 480px) {
+  .title {
+    width: 50%;
+    margin-top: 2vw;
+  }
+  section {
+    height: 70%;
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 360px) {
+  .title {
+    width: 65%;
+    margin-top: 2vw;
+  }
+  section {
+    height: 70%;
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+}
