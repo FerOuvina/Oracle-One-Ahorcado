@@ -12,11 +12,9 @@
 }
 
 body {
-  height: 100vh;
-  overflow: hidden;
-  background-color: var(--softblack);
+    background-color: var(--softblack);
 }
-
+/* Header */
 .title {
   margin: 1vw;
   margin-left: 3vw;
@@ -33,21 +31,51 @@ body {
   color: var(--softblue);
 }
 
-section {
-  height: 80%;
+/* Main Section */
+.main {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
-  align-items: center;
+  margin: 2vw 20vw;
+  background-color: var(--softblue);
+  box-shadow: 5px 5px var(--lightgreen);
+  border-radius: 10px;
 }
 
-article {
-  text-align: center;
+.main__article {
+  margin: 2vw;
+  display: flex;
+  justify-content: center;
 }
 
+/* Main SVG Styles */
+
+.base, .bean, .rope, .ceiling{
+  fill: var(--softblack);
+}
+
+.body, .head, .right__arm, .left__arm, .right__leg, .left__leg {
+  fill: var(--lightgreen);
+}
+
+.main__input {
+  margin: 2vw;
+  display: flex;
+  justify-content: center;
+}
+
+.rectangle {
+  fill: var(--softblack);
+}
+
+/* Outside Section */
+.outside {
+  display: flex;
+  justify-content: center;
+}
 button {
   margin: 2vw;
-  width: auto;
+  width: 10vw;
   padding: 10px;
   font-size: 1.2rem;
   background-color: var(--softblue);
@@ -71,10 +99,12 @@ button a:visited {
   color: black;
 }
 
+/* Footer */
 footer {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  margin-top: 5vw;
 }
 
 footer a {
@@ -88,59 +118,4 @@ footer a {
 
 footer a:visited {
   color: var(--lightgreen);
-}
-
-/* Desktop Media Query */
-
-@media (max-width: 1366px) {
-  .title {
-    width: 19%;
-  }
-}
-
-/* Tablet Media Query */
-
-@media (max-width: 768px) {
-  .title {
-    width: 32%;
-  }
-  section {
-    height: 70%;
-  }
-}
-
-@media (max-width: 1280px) {
-  .title {
-    width: 20%;
-  }
-}
-
-/* Mobile Media Query */
-
-@media (max-width: 480px) {
-  .title {
-    width: 50%;
-    margin-top: 2vw;
-  }
-  section {
-    height: 70%;
-  }
-  .container {
-    display: flex;
-    flex-direction: column;
-  }
-}
-
-@media (max-width: 360px) {
-  .title {
-    width: 65%;
-    margin-top: 2vw;
-  }
-  section {
-    height: 70%;
-  }
-  .container {
-    display: flex;
-    flex-direction: column;
-  }
 }
