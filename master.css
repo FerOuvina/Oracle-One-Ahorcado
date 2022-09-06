@@ -1,14 +1,17 @@
+:root {
+  --softblack: #5a5050;
+  --blue: #547a82;
+  --softblue: #3eaca8;
+  --softgreen: #a2d4ab;
+  --lightgreen: #e5eec1;
+}
+
 * {
   margin: 0%;
   padding: 0%;
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
   font-size: 16px;
-  --softblack: #5a5050;
-  --blue: #547a82;
-  --softblue: #3eaca8;
-  --softgreen: #a2d4ab;
-  --lightgreen: #e5eec1;
 }
 
 body {

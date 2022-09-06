@@ -41,16 +41,17 @@
           fill="#0A3871" />
       </svg>
     </article>
+    <article class="user__input">
+      <input type="text" disabled hidden>
+    </article>
     <article class="main__input">
-      <svg width="80" height="4" viewBox="0 0 80 4" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <rect class="rectangle" width="80" height="4" rx="2" fill="#0A3871" />
-      </svg>
+      <input type="text" disabled hidden> 
     </article>
   </section>
   <section class="outside">
     <article class="outside__buttons">
-      <button type="button">Nuevo Juego</button>
-      <button type="button">Rendirse</button>
+      <button type="button"><a href="./game.html">Nuevo Juego</a></button>
+      <button type="button" onclick="surrenderAlert()">Rendirse</button>
     </article>
   </section>
 
@@ -68,7 +69,8 @@
 
 
   <!-- JS Script Link -->
-  <link rel="stylesheet" href="script.js">
+  <script src="script.js"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </body>
 
 </html>
