@@ -47,11 +47,14 @@
     <article class="main__input">
       <input type="text" disabled hidden> 
     </article>
+    <article class="main__output">
+      <input type="text" disabled hidden> 
+    </article>
   </section>
   <section class="outside">
     <article class="outside__buttons">
-      <button type="button"><a href="./game.html">Nuevo Juego</a></button>
-      <button type="button" onclick="surrenderAlert()">Rendirse</button>
+      <button type="button" class="outside__buttons--btn"><a href="./game.html">Nuevo Juego</a></button>
+      <button type="button" class="outside__buttons--btn" id="outside__buttons--surrender">Rendirse</button>
     </article>
   </section>
 
@@ -65,12 +68,10 @@
 
 
 
-
-
-
   <!-- JS Script Link -->
   <script src="script.js"></script>
-  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <!-- Sweet Alert Library -->
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 
 </html>

@@ -1,45 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Font Awesome Kit -->
-  <script src="https://kit.fontawesome.com/5fc0185a9e.js" crossorigin="anonymous"></script>
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <!-- Font Awesome Kit -->
+  <script src="https://kit.fontawesome.com/5fc0185a9e.js" crossorigin="anonymous"></script>
   <!-- CSS Link -->
-  <link rel="stylesheet" href="master.css">
+  <link rel="stylesheet" href="extra-word.css">
   <title>Ahorcado</title>
 </head>
-
 <body>
   <!-- Start of Header -->
   <header>
     <h1 class="title">Ahor<span class="title1">cado</span></h1>
   </header>
-  <!-- End of Header -->
+
   <!-- Start of Main Section -->
-  <section>
-    <article>
-      <div class="container">
-        <button type="button"><a href="game.html">Iniciar Juego</a></button>
-        <button type="button"><a href="extra-word.html">Agregar Palabra</a></button>
-      </div>
+  <section class="main">
+    <article class="main__article--first">
+      <textarea name="" id="" cols="30" rows="10" class="main__article--textarea" placeholder="Ingrese aquí la palabra que desea agregar..." autofocus></textarea>
+      <p class="main__article--p">&#x26a0 Máximo 8 caracteres, sin espacios y/o acentos.</p>
+    </article>
+    <article class="main__article--second">
+      <button type="button" class="main__article--secondBtn" id="submitWord"><a href="#">Agregar Palabra</a> </button>
+      <button type="button" class="main__article--secondBtn"><a href="index.html">Cancelar</a> </button>
     </article>
   </section>
-  <!-- End of Main Section -->
-  <!-- Start of Footer -->
+
   <footer>
     <div class="footer">
       <a href="https://github.com/FerOuvina"><i class="fa-brands fa-square-github"></i> GitHub</a>
       <a href="https://www.linkedin.com/in/fernando07/"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
     </div>
   </footer>
-  <!-- End of footer -->
+<!-- JS Link -->
+<script src="extra-word.js"></script>
+<!-- Sweet Alert Library -->
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
-
 </html>

@@ -15,11 +15,10 @@
 }
 
 body {
-  height: 100vh;
-  overflow: hidden;
   background-color: var(--softblack);
 }
 
+/* Header */
 .title {
   margin: 1vw;
   margin-left: 3vw;
@@ -31,26 +30,58 @@ body {
   background: linear-gradient(45deg, var(--softblue) 47%, var(--lightgreen) 20%);
   border-radius: 5px;
 }
+
 .title1 {
   font-size: 2.5rem;
   color: var(--softblue);
 }
 
-section {
-  height: 80%;
+/* Section */
+.main {
+  display: flex;
+  flex-direction: column;
+}
+/* First Article */
+.main__article--first {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.main__article--p {
+  margin-top: 0.5vw;
+  color: var(--softgreen);
+  font-size: 0.9rem;
+}
+
+.main__article--textarea {
+  width: 50vw;
+  height: 50vh;
+  margin-top: 2vw;
+  padding: 2vw;
+  resize: none;
+  font-size: 3rem;
+  color: var(--lightgreen);
+  background-color: var(--softblue);
+  border: 2px solid var(--lightgreen);
+  border-radius: 10px;
+  box-shadow: 5px 5px var(--lightgreen);
+}
+
+.main__article--textarea:focus {
+  outline-style: none;
+}
+/* Second Article */
+.main__article--second {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: center;
 }
 
-article {
-  text-align: center;
-}
-
-button {
-  margin: 2vw;
-  width: auto;
+.main__article--secondBtn {
+  margin: 1vw;
+  width: 10vw;
   padding: 10px;
   font-size: 1.2rem;
   background-color: var(--softblue);
@@ -60,26 +91,26 @@ button {
   transition: all 1s ease;
 }
 
-button:hover {
+.main__article--secondBtn:hover {
   box-shadow: -5px -5px var(--lightgreen);
   transform: translate(-5px, -5px);
 }
 
-button a {
+.main__article--secondBtn a {
   color: black;
   text-decoration: none;
-  font-size: 1.8rem;
 }
 
-button a:visited {
+.main__article--secondBtn a:visited {
   color: black;
 }
 
+/* Footer */
 footer {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  margin-top: 1vw;
+  margin-top: 8vw;
 }
 
 footer a {
@@ -93,59 +124,4 @@ footer a {
 
 footer a:visited {
   color: var(--lightgreen);
-}
-
-/* Desktop Media Query */
-
-@media (max-width: 1366px) {
-  .title {
-    width: 19%;
-  }
-}
-
-/* Tablet Media Query */
-
-@media (max-width: 768px) {
-  .title {
-    width: 32%;
-  }
-  section {
-    height: 70%;
-  }
-}
-
-@media (max-width: 1280px) {
-  .title {
-    width: 20%;
-  }
-}
-
-/* Mobile Media Query */
-
-@media (max-width: 480px) {
-  .title {
-    width: 50%;
-    margin-top: 2vw;
-  }
-  section {
-    height: 70%;
-  }
-  .container {
-    display: flex;
-    flex-direction: column;
-  }
-}
-
-@media (max-width: 360px) {
-  .title {
-    width: 65%;
-    margin-top: 2vw;
-  }
-  section {
-    height: 70%;
-  }
-  .container {
-    display: flex;
-    flex-direction: column;
-  }
 }

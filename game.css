@@ -15,8 +15,9 @@
 }
 
 body {
-    background-color: var(--softblack);
+  background-color: var(--softblack);
 }
+
 /* Header */
 .title {
   margin: 1vw;
@@ -29,6 +30,7 @@ body {
   background: linear-gradient(45deg, var(--softblue) 47%, var(--lightgreen) 20%);
   border-radius: 5px;
 }
+
 .title1 {
   font-size: 2.5rem;
   color: var(--softblue);
@@ -52,7 +54,6 @@ body {
 }
 
 /* Main SVG Styles */
-
 .base, .bean, .rope, .ceiling{
   fill: var(--softblack);
 }
@@ -63,24 +64,24 @@ body {
 }
 
 .user__input {
-  margin: 2vw;
   display: flex;
   justify-content: center;
 }
 
 .user__input--disabled {
+  color: var(--lightgreen);
+  text-align: center;
+  font-size: 2rem;
   width: 3vw;
-  height: 5px;
-  margin: 2vw;
+  margin: 0 2vw;
   display: flex;
   justify-content: center;
-  border: 1px solid var(--softblack);
-  border-radius: 5px;
-  background-color: var(--softblack);
+  border: none;
+  background: transparent;
 }
 
 .main__input {
-  margin: 2vw;
+  margin: 0 0 2vh;
   display: flex;
   justify-content: center;
 }
@@ -88,12 +89,30 @@ body {
 .main__input--disabled {
   width: 3vw;
   height: 5px;
-  margin: 2vw;
+  margin: 0 2vw;
   display: flex;
   justify-content: center;
   border: 1px solid var(--softblack);
   border-radius: 5px;
   background-color: var(--softblack);
+}
+
+.main__output {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.main__output--disabled {
+  width: 3vw;
+  padding: 1vh;
+  margin: 0 2vw;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  border: none;
+  background: transparent;
+  outline: none ;
 }
 
 .rectangle {
@@ -105,7 +124,8 @@ body {
   display: flex;
   justify-content: center;
 }
-button {
+
+.outside__buttons--btn {
   margin: 2vw;
   width: 10vw;
   padding: 10px;
@@ -117,7 +137,7 @@ button {
   transition: all 1s ease;
 }
 
-button:hover {
+.outside__buttons--btn:hover {
   box-shadow: -5px -5px var(--lightgreen);
   transform: translate(-5px, -5px);
 }
@@ -136,7 +156,7 @@ footer {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  margin-top: 5vw;
+  margin-top: 4vw;
 }
 
 footer a {
