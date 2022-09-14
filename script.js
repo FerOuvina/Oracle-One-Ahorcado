@@ -101,6 +101,11 @@ function surrenderAlert(){
 };
 document.getElementById("outside__buttons--surrender").addEventListener("click",function(){surrenderAlert()});
 
+// Get user extra word
+if(localStorage.getItem("extraWord")){
+  secretWord.push(localStorage.getItem("extraWord"));
+};
+
 // Getting a random word
 const secretWord = ["ARROZ","CAFE","OSO","GATO"];
 const secretWordLenght = secretWord.length;
@@ -109,11 +114,6 @@ function getSecretWord(secretWordLenght){return secretWord[randomNumber(secretWo
 const chosenWord = getSecretWord(secretWordLenght);
 letters = Array.from(chosenWord);
 verifyChar = Array.from(chosenWord);
-
-// Get new word
-if(localStorage.getItem("extraWord")){
-  secretWord.push(localStorage.getItem("extraWord"));
-};
 
 // Drawing the hangman
 function checkTries(tries){
