@@ -21,16 +21,26 @@ body {
 }
 
 .title {
+  display: inline-block;
   margin: 1vw;
   margin-left: 3vw;
   padding-left: 1vw;
+  padding-right: 1vw;
+  font-size: 2.5rem;
+  letter-spacing: 2px;
+  color: var(--lightgreen);
+  background: linear-gradient(45deg, var(--softblue) 49%, var(--lightgreen) 20%);
+  border-radius: 5px;
+}
+
+.title a {
+  text-decoration: none;
   width: 16%;
   font-size: 2.5rem;
   letter-spacing: 2px;
   color: var(--lightgreen);
-  background: linear-gradient(45deg, var(--softblue) 47%, var(--lightgreen) 20%);
-  border-radius: 5px;
 }
+
 .title1 {
   font-size: 2.5rem;
   color: var(--softblue);
@@ -66,9 +76,10 @@ button:hover {
 }
 
 button a {
+  margin: 0 2vw;
   color: black;
   text-decoration: none;
-  font-size: 1.8rem;
+  font-size: 1.5rem;
 }
 
 button a:visited {
@@ -95,36 +106,21 @@ footer a:visited {
   color: var(--lightgreen);
 }
 
-/* Desktop Media Query */
-
-@media (max-width: 1366px) {
-  .title {
-    width: 19%;
+/* Media Query */
+@media (max-width: 962px){
+  section {
+    height: 65%;
   }
 }
 
-/* Tablet Media Query */
-
-@media (max-width: 768px) {
-  .title {
-    width: 32%;
-  }
+@media (max-width: 768px){
   section {
     height: 70%;
   }
 }
 
-@media (max-width: 1280px) {
+@media (max-width: 414px){
   .title {
-    width: 20%;
-  }
-}
-
-/* Mobile Media Query */
-
-@media (max-width: 480px) {
-  .title {
-    width: 50%;
     margin-top: 2vw;
   }
   section {
@@ -136,11 +132,7 @@ footer a:visited {
   }
 }
 
-@media (max-width: 360px) {
-  .title {
-    width: 65%;
-    margin-top: 2vw;
-  }
+@media (max-width: 360px){
   section {
     height: 70%;
   }

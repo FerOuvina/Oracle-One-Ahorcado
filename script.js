@@ -184,8 +184,22 @@ function showWrongAnswers(char){
   };
 };
 
+// Setting game mobile
+function gameStartMobile(char){
+  if(/^[A-ZÄËÏÖÜ\u00d1\s]*$/.test(char)){
+    let foundChar = verifyChar.find((element) => element == char);
+    if(foundChar){
+      showCorrectAnswers(char);
+    } else {
+      showWrongAnswers(char);
+    };
+  } else {
+    showToast("Solo se permite el uso de letras y/o sin acentos")
+  };
+};
+
 // Setting game
-function gameStart (e){
+function gameStart(e){
   const char = String.fromCharCode(e.keyCode).toUpperCase();
   if(e.keyCode != 0 && e.keyCode != 13){
     if(/^[A-ZÄËÏÖÜ\u00d1\s]*$/.test(char)){
@@ -203,6 +217,15 @@ function gameStart (e){
   };
 };
 
+// Start Game on mobile devices
+function startGameMobile(e){
+  if(gameEnd){
+    return false;
+  }else{
+    gameStartMobile(e);
+  };
+};
+
 // Starting game
 function playGame(e){
   if(gameEnd){
@@ -212,8 +235,17 @@ function playGame(e){
   };
 };
 
+function mobileKeyboard(e){
+  startGameMobile(e);
+};
+
 window.onload = function(){
   document.onkeydown = playGame;
   showWordUnderline(chosenWord);
   getUserInput(chosenWord);
+};
+
+// Condition to show on screen keyboard if user is on mobile devices
+if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent)) {
+  document.querySelector('.keyboard').style.display = 'flex';
 };

@@ -20,15 +20,24 @@ body {
 
 /* Header */
 .title {
+  display: inline-block;
   margin: 1vw;
   margin-left: 3vw;
   padding-left: 1vw;
+  padding-right: 1vw;
+  font-size: 2.5rem;
+  letter-spacing: 2px;
+  color: var(--lightgreen);
+  background: linear-gradient(45deg, var(--softblue) 49%, var(--lightgreen) 20%);
+  border-radius: 5px;
+}
+
+.title a {
+  text-decoration: none;
   width: 16%;
   font-size: 2.5rem;
   letter-spacing: 2px;
   color: var(--lightgreen);
-  background: linear-gradient(45deg, var(--softblue) 47%, var(--lightgreen) 20%);
-  border-radius: 5px;
 }
 
 .title1 {
@@ -119,6 +128,26 @@ body {
   fill: var(--softblack);
 }
 
+/* Keyboard */
+.keyboard {
+  display: none;
+}
+
+.keyboard button {
+  font-size: 1rem;
+  text-align: center;
+  width: 2vw;
+  margin: 0.5vw;
+  background-color: var(--softblue);
+  border: 2px solid var(--lightgreen);
+  border-radius: 10px;
+  box-shadow: 3px 3px var(--lightgreen);
+}
+
+.keyboard button:active {
+  background-color: var(--blue);
+}
+
 /* Outside Section */
 .outside {
   display: flex;
@@ -156,7 +185,6 @@ footer {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  margin-top: 4vw;
 }
 
 footer a {
@@ -170,4 +198,209 @@ footer a {
 
 footer a:visited {
   color: var(--lightgreen);
+}
+
+/* Media Query */
+@media(max-width: 1536px){
+  footer {
+    margin: 1vw;
+  }
+}
+
+@media(max-width: 1366px){
+  .main__article {
+    margin: 0;
+    margin-top: 1vw;
+  }
+  #graphic {
+    width: 20vw;
+  }
+  footer {
+    margin-top: 0;
+  }
+}
+
+@media(max-width: 1280px){
+  .outside__buttons--btn {
+    margin: 0 2vw 1vw;
+    width: 12vw;
+  }
+  footer {
+    margin-top: 2vw;
+  }
+}
+
+@media(max-width: 1024px){
+  .outside__buttons--btn {
+    margin: 3vw 2vw;
+    width: 15vw;
+  }
+}
+
+@media(max-width: 962px){
+  .main {
+    margin: 2vw 20vw 1vw 20vw;
+  }
+  #graphic {
+    margin-top: 1vw;
+    height: 25vw;
+  }
+  .user__input--disabled {
+    font-size: 1.5rem;
+    margin-top: 1vw;
+  }
+  .main__input {
+    margin: 0;
+  }
+  .main__output--disabled {
+    font-size: 1rem;
+  }
+  .keyboard {
+    display: flex;
+    justify-content: center;
+  }
+  .outside__buttons--btn {
+    margin: 1.2vw;
+    width: 14vw;
+  }
+  .outside__button a {
+    font-size: 0.8rem;
+  }
+  footer {
+    margin-top: 0.8vw;
+  }
+}
+
+@media(max-width: 800px){
+  .main {
+    margin: 2vw 15vw 1vw 15vw;
+  }
+  #graphic {
+    height: 70vw;
+    width: 50vw;
+  }
+  .main__output--disabled {
+    padding: 0;
+    margin: 1vw 2vw;
+  }
+  .keyboard {
+    margin: 5vw 2vw;
+    flex-direction: column;
+  }
+  .keyboard button {
+    font-size: 1.5rem;
+    width: 5vw;
+    margin: 1vw;
+  }
+  .keyboard__container1 {
+    display: flex;
+    justify-content: center;
+  }
+  .keyboard__container2 {
+    display: flex;
+    justify-content: center;
+  }
+  .keyboard__container3 {
+    display: flex;
+    justify-content: center;
+  }
+  .outside__buttons--btn {
+    width: 20vw;
+    font-size: 1rem;
+  }
+  .outside__buttons--btn a {
+    font-size: 1rem;
+  }
+  footer {
+    margin: 5vw;
+  }
+  footer a {
+    margin: 0 2vw;
+  }
+}
+
+@media(max-width: 768px){
+  #graphic {
+    height: 60vw;
+    width: 50vw;
+  }
+  footer {
+    margin: 2vw 0 0 0;
+  }
+}
+
+@media(max-width: 601px){
+  .outside__buttons--btn {
+    width: 25vw;
+  }
+  footer {
+    margin: 10vw 0 0 0;
+  }
+}
+
+@media(max-width: 414px){
+  .main {
+    margin: 5vw 15vw;
+  }
+  #graphic {
+    height: 70vw;
+    width: 50vw;
+  }
+  .user__input--disabled {
+    width: 5vw;
+  }
+  .main__input--disabled {
+    width: 5vw;
+  }
+  .keyboard button {
+    font-size: 1.5rem;
+    width: 10vw;
+  }
+  .outside__buttons--btn {
+    width: 35vw;
+  }
+  footer {
+    margin-top: 10vw;
+  }
+}
+
+@media(max-width: 360px){
+  .keyboard button {
+    font-size: 1.2rem;
+    width: 10vw;
+  }
+  .main__output--disabled {
+    width: 5vw;
+  }
+  .outside__buttons--btn {
+    font-size: 1rem;
+    width: 35vw;
+    padding: 5px;
+    margin: 0 2vw;
+  }
+  .outside__buttons--btn a{
+    font-size: 1rem;
+  }
+  footer {
+    margin-top: 4vw;
+  }
+}
+
+@media(max-height: 667px){
+  .keyboard button {
+    font-size: 1rem;
+    width: 10vw;
+  }
+  .outside__buttons--btn {
+    font-size: 0.8rem;
+    width: 35vw;
+    padding: 5px;
+    margin: 0 2vw;
+  }
+  .outside__buttons--btn a{
+    font-size: 0.8rem;
+  }
+  footer {
+    margin-top: 4vw;
+  }
 }
