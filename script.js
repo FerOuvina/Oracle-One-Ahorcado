@@ -101,13 +101,10 @@ function surrenderAlert(){
 };
 document.getElementById("outside__buttons--surrender").addEventListener("click",function(){surrenderAlert()});
 
-// Get user extra word
-if(localStorage.getItem("extraWord")){
-  secretWord.push(localStorage.getItem("extraWord"));
-};
-
 // Getting a random word
 const secretWord = ["ARROZ","CAFE","OSO","GATO"];
+/* Get extra word from user */
+if(localStorage.getItem("extraWord")){secretWord.push(localStorage.getItem("extraWord"));};
 const secretWordLenght = secretWord.length;
 function randomNumber(max){return Math.floor(Math.random() * max)};
 function getSecretWord(secretWordLenght){return secretWord[randomNumber(secretWordLenght)]};
